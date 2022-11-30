@@ -45,7 +45,6 @@ public class BoardWindow extends Canvas {
     caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
     this.frame.getContentPane().add(scroll, BorderLayout.CENTER);
     this.frame.getContentPane().add(inputField, BorderLayout.SOUTH);
-    textArea.append("Hello Player");
     this.frame.pack();
     this.frame.setVisible(true);
   }

@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class Level {
 
-    private static final int CELL_SIZE = 100;
+    private static final int CELL_SIZE = 75;
     private Room startingRoom;
     private Room endingRoom;
     private String successMessage;

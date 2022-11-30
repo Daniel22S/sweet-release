@@ -39,6 +39,7 @@ public class Game {
 
   public String runCommand(String command) {
     String feedback;
+
     if (command.isEmpty()) {
       feedback = "Enter a command";
     } else {
