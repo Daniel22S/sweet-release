@@ -17,6 +17,31 @@ public class Main {
   private static final String LEVEL_ONE_SUCCESS_MESSAGE = "You have crawled into the vent and and feel your sweaty love handles scrape " +
           "against the metallic surfaces of the vent. you've become stuck, you die questioning why you ever dropped hot yoga, in the " +
           "darkness, the sounds of your sobbing echoes out to the rest of the ship for months.";
+  private static final String HALLWAYTWO_DESCRIPTION = "Hallway flavour space";
+  private static final String LOUNGE_DESCRIPTION = "Lounge flavour";
+  private static final String BUNKS_DESCRIPTION = "A room full of beds.";
+  private static final String KITCHEN_DESCRIPTION = "A barren but functional kitchen";
+  private static final String ACCESSWAY_DESCRIPTION = "A passage to access further into the ship.";
+  private static final String STORAGE_DESCRIPTION = "A storage room, for dust apparently.";
+  private static final String STAIRWAY_DESCRIPTION = "Stairs down to the flight deck.";
+  private static final String CORRIDORONE_DESCRIPTION = "you enter a long metallic corridor";
+  private static final String CORRIDORTWO_DESCRIPTION = "you walk into another bland metallic corridor and wonder at the sheer lack of imagination of the ship architect.";
+  private static final String ARMORY_DESCRIPTION = "you creep into the armory, it stinks of munitions, grease and gun powder.";
+  private static final String DIRTYBATHROOM_DESCRIPTION = "why you chose to walk in here is beyond mortal comprehension as tears spring to your eyes,\n" +
+      " the hellish scent from outside was merely the briefest of introductions to the new wave of rippling nightmares now assaulting your nostrils.\n " +
+      "your eyes take in the cracked mirrors, then wander across the urinal blasted apart by a ferocity you feel unwilling to imagine and over\n" +
+      " the floor, smeared and crusted with experiences best left in the darker pools of the imagination,\n" +
+      " two cubicles loom at you from across the room, one of which is sealed off, and by the looks of the naked grey foot peeking out from the gap, has been occupied for some time.";
+  private static final String FOYER_DESCRIPTION = "you bounce into a surprisingly lovely room, your feet are cuddled by a thick fluffy carpet, a chandelier gracefully drifts down from the ceiling, thick velvety cushioned seats surround the room, as well as a delicate cheese platter\n" +
+      " and thick gold plated doors bar entry to what can only be more beautiful rooms.";
+  private static final String FIRSTMATEROOM_DESCRIPTION = "you wander into a well furnished room with a four poster princess bed, every corner of the room seems buried in sparkly stuffed unicorns.";
+  private static final String HANGER_DESCRIPTION = "you enter a large hanger, theres a desk covered in books and papers, a greasy puddle and most importantly, several ever so slightly rusty escape pods line the northern wall";
+  private static final String CAPTAINROOM_DESCRIPTION = "you scuttle into the captains room, it's a velvety room, majestic in it's extravagance, filled with audacious self portraits of the captain in horrifyingly extreme erotic poses, several stuffed monstrous animals decorate the room and a huge golden clam\n" +
+      " dominates the far end of the room, it appears to of been the captains bed and is worryingly etched with the words 'pleasure chamber' a large fleshy body lies within the clam\n" +
+      "he has a silk scarf stretched over his neck, and wears nothing but a thick leather belt with a jewel encrusted buckle crafted into a fat seahorse.";
+  private static final String FUELROOM_DESCRIPTION = "a dank room, containing shelves of fuel, some of which even have fuel in them.";
+  private static final String THEESCAPEPOD_DESCRIPTION = "\"its a creaky old coffin, with a navigation system that can barely run Doom, despite evidence of multiple attempts to do so, but if it can get you off the ship, you'd blast off in a bin\"";
+
   public static Game game;
 
   public static void main(String[] args) {
@@ -90,13 +115,13 @@ public class Main {
   private static Level initLevel2() {
     int levelWidth = 6;
     int levelHeight = 6;
-    Room hallwayTwo = new Room("hallwayTwo", "Hallway flavour space", levelWidth, levelHeight, 2, 1);
-    Room lounge = new Room("lounge", "Lounge flavour", levelWidth, levelHeight);
-    Room bunks = new Room("bunks", "A room full of beds.", levelWidth, levelHeight);
-    Room kitchen = new Room("kitchen", "A barren but functional kitchen", levelWidth, levelHeight);
-    Room accessWay = new Room("accessWay", "A passage to access further into the ship.", levelWidth, levelHeight);
-    Room storage = new Room("storage", "A storage room, for dust apparently.", levelWidth, levelHeight);
-    Room stairway = new Room("stairway", "Stairs down to the flight deck.", levelWidth, levelHeight);
+    Room hallwayTwo = new Room("hallwayTwo", HALLWAYTWO_DESCRIPTION, levelWidth, levelHeight, 2, 1);
+    Room lounge = new Room("lounge", LOUNGE_DESCRIPTION, levelWidth, levelHeight);
+    Room bunks = new Room("bunks", BUNKS_DESCRIPTION, levelWidth, levelHeight);
+    Room kitchen = new Room("kitchen", KITCHEN_DESCRIPTION, levelWidth, levelHeight);
+    Room accessWay = new Room("accessWay", ACCESSWAY_DESCRIPTION, levelWidth, levelHeight);
+    Room storage = new Room("storage", STORAGE_DESCRIPTION, levelWidth, levelHeight);
+    Room stairway = new Room("stairway", STAIRWAY_DESCRIPTION, levelWidth, levelHeight);
 
     hallwayTwo.putDirection(Direction.EAST, lounge);
     hallwayTwo.putDirection(Direction.WEST, kitchen);
@@ -138,23 +163,16 @@ public class Main {
     int levelWidth = 6;
     int levelHeight = 6;
 //    Room startingRoom = new Room("corridor", "you waddle up the stairs, puffing and wheezing despite it only being up a single floor, and end up in a metallic corridor", levelWidth, levelHeight, 2, 1); )
-    Room corridorOne = new Room("corridor", "you enter a long metallic corridor", levelWidth, levelHeight, 2, 1);
-    Room corridorTwo = new Room("corridor", "you walk into another bland metallic corridor and wonder at the sheer lack of imagination of the ship architect.", levelWidth, levelHeight);
-    Room armory = new Room("armory", "you creep into the armory, it stinks of munitions, grease and gun powder.", levelWidth, levelHeight);
-    Room dirtyBathroom = new Room("a dirty bathroom", "why you chose to walk in here is beyond mortal comprehension as tears spring to your eyes,\n" +
-            " the hellish scent from outside was merely the briefest of introductions to the new wave of rippling nightmares now assaulting your nostrils.\n " +
-            "your eyes take in the cracked mirrors, then wander across the urinal blasted apart by a ferocity you feel unwilling to imagine and over\n" +
-            " the floor, smeared and crusted with experiences best left in the darker pools of the imagination,\n" +
-            " two cubicles loom at you from across the room, one of which is sealed off, and by the looks of the naked grey foot peeking out from the gap, has been occupied for some time.", levelWidth, levelHeight);
-    Room foyer = new Room("foyer", "you bounce into a surprisingly lovely room, your feet are cuddled by a thick fluffy carpet, a chandelier gracefully drifts down from the ceiling, thick velvety cushioned seats surround the room, as well as a delicate cheese platter\n" +
-            " and thick gold plated doors bar entry to what can only be more beautiful rooms.", levelWidth, levelHeight);
-    Room firstMateRoom = new Room("first mate's room", "you wander into a well furnished room with a four poster princess bed, every corner of the room seems buried in sparkly stuffed unicorns.", levelWidth, levelHeight);
-    Room hanger = new Room("Hanger", "you enter a large hanger, theres a desk covered in books and papers, a greasy puddle and most importantly, several ever so slightly rusty escape pods line the northern wall", levelWidth, levelHeight);
-    Room captainRoom = new Room("captain's room", "you scuttle into the captains room, it's a velvety room, majestic in it's extravagance, filled with audacious self portraits of the captain in horrifyingly extreme erotic poses, several stuffed monstrous animals decorate the room and a huge golden clam\n" +
-            " dominates the far end of the room, it appears to of been the captains bed and is worryingly etched with the words 'pleasure chamber' a large fleshy body lies within the clam\n" +
-            "he has a silk scarf stretched over his neck, and wears nothing but a thick leather belt with a jewel encrusted buckle crafted into a fat seahorse.", levelWidth, levelHeight);
-    Room fuelRoom = new Room("fuel room", "a dank room, containing shelves of fuel, some of which even have fuel in them.", levelWidth, levelHeight);
-    Room theEscapePod = new Room("the escape pod", "its a creaky old coffin, with a navigation system that can barely run Doom, despite evidence of multiple attempts to do so, but if it can get you off the ship, you'd blast off in a bin", levelWidth, levelHeight);
+    Room corridorOne = new Room("corridor", CORRIDORONE_DESCRIPTION, levelWidth, levelHeight, 2, 1);
+    Room corridorTwo = new Room("corridor", CORRIDORTWO_DESCRIPTION, levelWidth, levelHeight);
+    Room armory = new Room("armory", ARMORY_DESCRIPTION, levelWidth, levelHeight);
+    Room dirtyBathroom = new Room("a dirty bathroom", DIRTYBATHROOM_DESCRIPTION, levelWidth, levelHeight);
+    Room foyer = new Room("foyer", FOYER_DESCRIPTION, levelWidth, levelHeight);
+    Room firstMateRoom = new Room("first mate's room", FIRSTMATEROOM_DESCRIPTION, levelWidth, levelHeight);
+    Room hanger = new Room("Hanger", HANGER_DESCRIPTION, levelWidth, levelHeight);
+    Room captainRoom = new Room("captain's room", CAPTAINROOM_DESCRIPTION, levelWidth, levelHeight);
+    Room fuelRoom = new Room("fuel room", FUELROOM_DESCRIPTION, levelWidth, levelHeight);
+    Room theEscapePod = new Room("the escape pod", THEESCAPEPOD_DESCRIPTION, levelWidth, levelHeight);
 
     corridorOne.putDirection(Direction.NORTH, hanger);
     corridorOne.putDirection(Direction.SOUTH, corridorTwo);
