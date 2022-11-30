@@ -27,6 +27,7 @@ public class Main {
     levelThree.getBoardWindow().hideBoard();
     game = new Game(new Player(levelOne.getStartingRoom(), levelOne), levelOne, levelTwo, levelThree);
     game.getCurrentLevel().getBoardWindow().getTextArea().append(BRIG_DESCRIPTION);
+    game.getCurrentLevel().getBoardWindow().getTextArea().append("\nWhat would you like to do?");
     game.getCurrentLevel().getBoardWindow().getInputField().addKeyListener(new UserInput(game));
     Scanner scanner = new Scanner(System.in);
     String input;

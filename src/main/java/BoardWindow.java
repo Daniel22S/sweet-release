@@ -35,12 +35,16 @@ public class BoardWindow extends Canvas {
     this.textArea = new JTextArea();
     this.inputField = new JTextField();
     this.frame.getContentPane().add(this, BorderLayout.NORTH);
+    this.frame.setBackground(Color.BLACK);
+    this.frame.setForeground(Color.BLACK);
     textArea.setRows(10);
     textArea.setLineWrap(true);
     textArea.setWrapStyleWord(true);
     textArea.setEditable(false);
+    textArea.setForeground(Color.lightGray);
+    textArea.setBackground(Color.black);
     JScrollPane scroll = new JScrollPane (textArea,
-            JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+            JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
     DefaultCaret caret = (DefaultCaret)textArea.getCaret();
     caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
     this.frame.getContentPane().add(scroll, BorderLayout.CENTER);
@@ -70,16 +74,16 @@ public class BoardWindow extends Canvas {
         Cell cell = board.getCells()[i][j];
         switch (cell.getCellType()) {
           case VISITED:
-            drawCell(i, j, new Color(0x413F42), g);
+          case START:
+            drawCell(i, j, new Color(0x5b5b5b), g);
             break;
           case CURRENT_ROOM:
-            drawCell(i, j, new Color(0x7F8487), g);
+            drawCell(i, j, new Color(0x3cb371), g);
             break;
-          case START:
-            drawCell(i, j, new Color(0xCAF0F8), g);
-            break;
+//            drawCell(i, j, new Color(0x999999), g);
+//            break;
           case EMPTY:
-            drawCell(i, j, new Color(0x181818), g);
+            drawCell(i, j, new Color(0x000000), g);
             break;
           default:
             break;

@@ -45,8 +45,8 @@ public class Game {
     } else {
     currentLevel.getBoardWindow().getTextArea().append("\n > " + command);
     switch (command.split(" ")[0]) {
-      case "shout":
-        feedback = "Good shouting";
+      case "help":
+        feedback = "You can use the following commands: move, inspect, break, address, take, check, and use";
         break;
       case "move":
       case "go":
