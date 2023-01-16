@@ -1,25 +1,23 @@
 import java.util.Scanner;
 
 public class Main {
-  private static final String BRIG_DESCRIPTION = "you awaken in a tiny gloomy room. you are sat on a filthy bed covered with " +
-          "a coarse blanket, no pillow. \n and a foul smelling bucket for your more primitive moments is on the opposite side " +
-          "of the room, the thick iron door on the east wall has been left ajar,\n you briefly consider giving them a scathing " +
+  private static final String BRIG_DESCRIPTION = "You awaken in a tiny gloomy room. you are sat on a filthy bed covered with " +
+          "a coarse blanket with no pillow, a foul smelling bucket for your more primitive moments is on the opposite side " +
+          "of the room, the thick iron door on the east wall has been left ajar. \n You briefly consider giving them a scathing " +
           "review on trip advisor, but settle on escaping this dingy vessel instead.";
-  private static final String HALLWAY_DESCRIPTION = "you walk into a hallway, a light flickers from the ceiling proving a dim view " +
-          "of your surroundings, you see the Mona Lisa tracking you from a wall, she creeps you out, and three doorways, one straight " +
+  private static final String HALLWAY_DESCRIPTION = "You walk into a hallway, a light flickers from the ceiling proving a dim view " +
+          "of your surroundings, you see a painting on the wall of the Mona Lise, eyes tracking you, she creeps you out. Three doorways, one straight " +
           "ahead of you, to the north, and two either side of you to the east and west.";
-  private static final String WORKSHOP_DESCRIPTION = "it smells very flammable.";
-  private static final String LOCKER_ROOM_DESCRIPTION = "this room has lockers in it";
-  private static final String OFFICE_DESCRIPTION = "you see an office, it has a big picture of Dan, eating pastries on one wall, it " +
-          "is both a confusing and inspiring piece. and a chair. theres also a vent on the north wall";
-  private static final String VENT_DESCRIPTION = "you see an office, it has a big picture of Dan, eating pastries on one wall, it is both a " +
-          "confusing and inspiring piece. and a chair. theres also a vent on the north wall";
+  private static final String WORKSHOP_DESCRIPTION = "It smells very flammable.";
+  private static final String LOCKER_ROOM_DESCRIPTION = "This room has lockers in it";
+  private static final String OFFICE_DESCRIPTION = "You see an office, it has a big picture of a man eating pastries on one wall, it " +
+          "is both a confusing and inspiring piece. There is a vent on the north wall";
+  private static final String VENT_DESCRIPTION = "Looks like a vent from Die Hard.";
   private static final String LEVEL_ONE_SUCCESS_MESSAGE = "You have crawled into the vent and and feel your sweaty love handles scrape " +
-          "against the metallic surfaces of the vent. you've become stuck, you die questioning why you ever dropped hot yoga, in the " +
-          "darkness, the sounds of your sobbing echoes out to the rest of the ship for months.";
+          "against the metallic surfaces of the vent. You fear you have become stuck, but finally wrench yourself through the vent.";
   private static final String HALLWAYTWO_DESCRIPTION = "Hallway flavour space";
-  private static final String LOUNGE_DESCRIPTION = "Lounge flavour";
-  private static final String BUNKS_DESCRIPTION = "A room full of beds.";
+  private static final String LOUNGE_DESCRIPTION = "You see a carpeted smoking lounge, with an art deco mezzanine harbouring a large functional globe, very impressive.";
+  private static final String BUNKS_DESCRIPTION = "You see a room filled with various bunks, beds, and cots. None are assigned, must be hot-bedding.";
   private static final String KITCHEN_DESCRIPTION = "A barren but functional kitchen";
   private static final String ACCESSWAY_DESCRIPTION = "A passage to access further into the ship.";
   private static final String STORAGE_DESCRIPTION = "A storage room, for dust apparently.";
