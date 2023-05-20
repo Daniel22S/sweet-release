@@ -1,4 +1,7 @@
-# Text Adventure Game
+# Sweet Release
+A questionable space adventure game, hosted on a [REPLIT](https://replit.com/@danmsto/Sweet-Release?v=1)
+
+## Text Adventure Game unit at EyUp Coding Academy
 
 In this project you will be making a retro text adventure game.
 
