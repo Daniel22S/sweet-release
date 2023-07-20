@@ -1,5 +1,6 @@
 # Sweet Release
-A questionable space adventure game, hosted on a [REPLIT](https://replit.com/@danmsto/Sweet-Release?v=1)
+
+**[A questionable space adventure game, hosted on replit](https://replit.com/@danmsto/Sweet-Release?v=1)**
 
 ## Text Adventure Game unit at EyUp Coding Academy
 
